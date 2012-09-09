@@ -1,0 +1,160 @@
+/**
+ * Styling of background colors and gradients for temple ordinance icons
+ * Dimensions:
+ * Large rectangle is 24x18 px;
+ * Small is 18x14 px.
+ * Type: Large is <Body> modified to Bold;
+ * Small is <Body> modified to Bold 11 px;
+ * centered right to left, top to bottom.
+ * Margin or Padding to left of each rectangle: 1 px (so that the rectangles don't touch).
+ * Corner Radius: 1 px
+ * Border: 1 px
+ *
+ * Ready: Gradient: Vertical, top=#DCE8F5, bottom=#97B7D8, border=#97B7DB, letters=#4B76B0
+ * On Hold: Gradient: Vertical, top=#739AC7, bottom=#314E73, border=#42699C, letters=#FFFFFF
+ * Printed: Gradient: Vertical, top=#B8CCAD, bottom=#6C8963, border=#7E9C73, letters=#FFFFFF
+ * Not Printed: Gradient: Vertical, top=#F2E3C2, bottom=#CA945D, border=#DBAC74, letters=#FFFFFF
+ * Completed: Gradient: Vertical, top=#EDECE8, bottom=#DEDBD7, border=#CCC8C4, letters=#3C3B36
+ * Not Available: fill=#FFFFFF, border=#99938D, dashed; letter=#B0ABA5
+ * Not Needed:  fill=#FFFFFF, border=transparent; letter=#B0ABA5
+ */
+.Ready .ordIcon,
+.Ready.ordIcon,
+.NeedsPermission .ordIcon,
+.NeedsPermission.ordIcon
+{
+    color: #4B76B0;
+    border-color: #97B7DB;
+    background-color: #DCE8F5;
+    background-image: -moz-linear-gradient(top, #DCE8F5, #97B7D8);
+    background-image: -o-linear-gradient(top, #DCE8F5, #97B7D8);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #DCE8F5), color-stop(1, #97B7D8));
+    background-image: -webkit-linear-gradient(#DCE8F5, #97B7D8);
+    background-image: linear-gradient(top, #DCE8F5, #97B7D8);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#DCE8F5', EndColorStr = '#97B7D8');
+
+}
+
+/* TODO: shouldn't have a camel cased and lower case ready
+ We might not be even using this because the settings are different */
+.ordIcon.ready {
+  background-color: #CA945D;
+  color: #fff;
+  border-color: transparent;
+}
+
+.InProgressPrinted .ordIcon,
+.InProgressPrinted.ordIcon
+{
+    color: #FFFFFF;
+    border-color: #7E9C73;
+    background-color: #88CCAD;
+
+    background-image: -moz-linear-gradient(top, #B8CCAD, #6C8963);
+    background-image: -o-linear-gradient(top, #B8CCAD, #6C8963);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #B8CCAD), color-stop(1, #6C8963));
+    background-image: -webkit-linear-gradient(#B8CCAD, #6C8963);
+    background-image: linear-gradient(top, #B8CCAD, #6C8963);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#B8CCAD', EndColorStr = '#6C8963');
+
+}
+
+.InProgressWaiting .ordIcon,
+.InProgressWaiting.ordIcon
+{
+    color: #FFFFFF;
+    border-color:#42699C;
+    background-color: #739AC7;
+    background-image: -moz-linear-gradient(top, #739AC7, #314E73);
+    background-image: -o-linear-gradient(top, #739AC7, #314E73);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #739AC7), color-stop(1, #314E73));
+    background-image: -webkit-linear-gradient(#739AC7, #314E73);
+    background-image: linear-gradient(top, #739AC7, #314E73);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#739AC7', EndColorStr = '#314E73');
+
+}
+
+.InProgressNotPrinted .ordIcon,
+.InProgressNotPrinted.ordIcon
+{
+    border-color:#DBAC74;
+    background-color: #F2E3C2;
+    color:#FFFFFF;
+    background-image: -moz-linear-gradient(top, #F2E3C2, #CA945D);
+    background-image: -o-linear-gradient(top, #F2E3C2, #CA945D);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F2E3C2), color-stop(1, #CA945D));
+    background-image: -webkit-linear-gradient(#F2E3C2, #CA945D);
+    background-image: linear-gradient(top, #F2E3C2, #CA945D);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#F2E3C2', EndColorStr = '#CA945D');
+
+}
+
+.Completed .ordIcon,
+.Completed.ordIcon
+{
+    color: #3C3B36;
+    border-color: #CCC8C4;
+    background-color: #EDECE8;
+    background-image: -moz-linear-gradient(top, #EDECE8, #DEDBD7);
+    background-image: -o-linear-gradient(top, #EDECE8, #DEDBD7);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EDECE8), color-stop(1, #DEDBD7));
+    background-image: -webkit-linear-gradient(#EDECE8, #DEDBD7);
+    background-image: linear-gradient(top, #EDECE8, #DEDBD7);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#EDECE8', EndColorStr = '#DEDBD7');
+
+}
+
+.NotNeeded .ordIcon,
+.NotNeeded.ordIcon,
+.NotReady .ordIcon,
+.NotReady.ordIcon,
+.NeedsMoreInformation .ordIcon,
+.NeedsMoreInformation.ordIcon,
+.Unavailable .ordIcon,
+.Unavailable.ordIcon,
+.NotAvailable .ordIcon,
+.NotAvailable.ordIcon,
+.Invalid .ordIcon,
+.Invalid.ordIcon
+{
+  background-color: #ffffff;
+  border-color:#99938D;
+  border-style:dashed;
+  color: #B0ABA5;
+}
+
+.NotNeeded .ordIcon,
+.NotNeeded.ordIcon,
+.NotApplicable.ordIcon
+{
+  border-color:transparent;
+}
+
+.NotApplicable.ordIcon {
+  visibility:hidden;
+}
+
+.ordIcon {
+    border-style:solid;
+    border-width:1px;
+    display: inline-block;
+    font-weight:bold;
+    text-align:center;
+    width:18px;
+    height:11px;
+    font-size:11px;
+    margin-left:1px;
+}
+
+.largeOrdIcon
+{
+    /*TODO these are the new values*/
+    /*height:18px;*/
+    /*width:24px;*/
+    height:13px;
+    width:24px;
+    font-size:13.26px;
+    margin-left:0px;
+    padding: 3px 0 3px 0; /* ie7 only */
+}
+

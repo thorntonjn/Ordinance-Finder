@@ -379,7 +379,7 @@ var Pedigree = Backbone.Model.extend({
     if (console && console.log) {
 //      console.log("\ndata:", resp.responseText);
     }
-    this.set(mapPersons(data.pedigrees.pedigree.persons.person));
+    this.set(mapPersons(data.familytree.pedigrees[0].pedigree[0].persons));
   }
 
 });
