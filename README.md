@@ -11,9 +11,7 @@ Find work needing to be done for your ancestors using familysearch.org API.
   <tbody>
     <tr> <td> Password                                                                                                                     <td>
     <tr> <td> <img src="https://github.com/bnoguchi/everyauth/raw/master/media/facebook.ico" style="vertical-align:middle"> FamilySearch.org       <td> <a href="https://github.com/rocketlabsdev">Tim Shadel</a>
-    <tr> <td> <img src="https://github.com/bnoguchi/everyauth/raw/master/media/twitter.ico" style="vertical-align:middle"> Twitter         <td>
-    <tr> <td> <img src="https://github.com/bnoguchi/everyauth/raw/master/media/google.ico" style="vertical-align:middle"> Google           <td>
-    <tr> <td> <img src="https://github.com/bnoguchi/everyauth/raw/master/media/google.ico" style="vertical-align:middle">     <td> <a href="https://github.com/rocketlabsdev">RocketLabs Development</a>
+    <tr> <td> <img src="https://github.com/bnoguchi/everyauth/raw/master/media/google.ico" style="vertical-align:middle">     <td> <a href="https://github.com/rocketlabsdev">Brian Noguchi</a>
   </tbody>
 </table>
 
