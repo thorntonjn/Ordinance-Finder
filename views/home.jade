@@ -1,0 +1,65 @@
+- if (everyauth.loggedIn)
+  section.header
+   div.navigation
+  section.content
+    p.userinfo= JSON.stringify(everyauth.familysearch.user)
+    section.ancestors.left.cf
+      div.ancestors-ready.cf
+        span.label.ready-count
+        a.show-ready(href='#') Ancestors Ready
+        a.hide-ready(href='#') Hide Ancestors With Ready Ordinances
+        section.ancestor-section.collapsed.hide
+      div.ancestors-need-work.cf
+        span.label.need-work-count
+        a.show-need-work(href='#') Ancestors Requiring More Info
+        a.hide-need-work(href='#') Hide Ancestors Requiring More Information
+        section.ancestor-section.collapsed.hide
+      div.ancestors-reserved.cf
+        span.label.reserved-count
+        a.show-reserved(href='#') Ancestors Reserved
+        a.hide-reserved(href='#') Hide Reserved
+        section.ancestor-section.collapsed.hide
+      div.ancestors-complete.cf
+        span.label.complete-count
+        a.show-complete(href='#') Ancestors Complete
+        a.hide-complete(href='#') Hide Ancestors Complete
+        section.ancestor-section.collapsed.hide
+      div.ancestors-unknown.cf
+        span.label.unknown-count
+        a.show-unknown(href='#') Ancestors With Unknown Status
+        a.hide-unknown(href='#') Hide Ancestors With Unknown Ordinances Status
+        section.ancestor-section.collapsed.hide
+     section.ordinances.right.cf
+      div.ordinances-ready.baptism.cf
+        span.label.baptism-ready-count
+        a.show-ready-baptism(href='#') Baptisms Ready
+        a.hide-ready-baptism(href='#') Hide Baptisms
+        section.ancestor-section.collapsed.hide
+      div.ordinances-ready.confirmation.cf
+        span.label.confirmation-ready-count
+        a.show-ready-confirmation(href='#') Confirmations Ready
+        a.hide-ready-confirmation(href='#') Hide Confirmations
+        section.ancestor-section.collapsed.hide
+      div.ordinances-ready.initiatory.cf
+        span.label.initiatory-ready-count
+        a.show-ready-initiatory(href='#') Initiatories Ready
+        a.hide-ready-initiatory(href='#') Hide Inititories
+        section.ancestor-section.collapsed.hide
+      div.ordinances-ready.endowment.cf
+        span.label.endowment-ready-count
+        a.show-ready-endowment(href='#') Endowments Ready
+        a.hide-ready-endowment(href='#') Hide Endowments
+        section.ancestor-section.collapsed.hide
+      div.ordinances-ready.sealing-to-parents.cf
+        span.label.sealing-to-parents-ready-count
+        a.show-ready-sealing-to-parents(href='#') Sealings To Parents Ready
+        a.hide-ready-sealing-to-parents(href='#') Hide Sealings To Parents
+        section.ancestor-section.collapsed.hide
+      div.ordinances-ready.sealing-to-spouse.cf
+        span.label.sealing-to-spouse-ready-count
+        a.show-ready-sealing-to-spouse(href='#') Sealings To Spouses Ready
+        a.hide-ready-sealing-to-spouse(href='#') Hide Sealings To Spouses
+        section.ancestor-section.collapsed.hide
+
+
+

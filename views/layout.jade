@@ -1,0 +1,105 @@
+!!! 5
+html.no-js
+  head
+    title= typeof(title) !== 'undefined' ? title : "Family Ordinance Viewer"
+    script(src='http://static.ak.fbcdn.net/connect/en_US/core.js')
+    link(rel="stylesheet", type="text/css", href="/reset.css")
+    link(rel="stylesheet", type="text/css", href="/temple.css")
+    link(rel="stylesheet", type="text/css", href="/ordinanceIcons.css")
+
+    block scripts
+      script(src='/jquery-1.7.1.js')
+      script(src='/modernizr-2.5.3.js')
+      script(src='/json2.js')
+      script(src='/underscore.js')
+      script(src='/backbone.js')
+      script(src='/ajax.js')
+      script(src='/dashboard.js')
+      script(src='/pedigree.js')
+      script(src='/relationships.js')
+      script(src='/descendants.js')
+      script(src='/reservations.js')
+      script(src='/ancestors.js')
+      script(src='/startup.js')
+
+  body
+    -if (!everyauth.loggedIn)
+      section.header
+        div.navigation
+          #register
+            a(href='/register') Register
+        div.subnavigation
+          h1 Ordinance Finder
+          div.auth
+            a.login(href='/auth/familysearch', style='display: inline-block;) GO
+              button#familysearch-login
+                a.login(href='/auth/familysearch', style='display: inline-block; border: 0px; height: 35px; width: 118px; background: url(https://cdn.familysearch.org/common/oquirrh/assets/sprite_chrome.png)')
+          div.store-local
+            form#store-local-form
+              input#store-local(type="checkbox", name="store-local", value="false", title="Allow temple data to be stored locally for better performance. Please do not set this option on a public computer.")
+              label(for="store-local") This is a private computer. Allow temple data to be stored locally so subsequent requests complete faster.
+
+    -else
+      section.header.authenticated
+        div.navigation
+          #register
+            a(href='/register') Register
+        div.subnavigation
+          h1 Ordinance Finder
+          div.auth
+            a(href='./logout', style='display: inline-block;) STOP
+              button
+                a(href='./logout', style='display: inline-block; border: 0px; height: 35px; width: 118px; background: url(https://cdn.familysearch.org/common/oquirrh/assets/sprite_chrome.png)')
+        div.status.hide
+          div.thin
+            h1.label.name Results for
+            span.label.name= everyauth.familysearch.user.name
+            span (
+            span.id= everyauth.familysearch.user.id
+            span )
+            span.label.username= everyauth.familysearch.user.username
+            span.email= everyauth.familysearch.user.email
+            br
+            span.label Ancestors Processed
+            span.ancestorsProcessed
+            span.label Ready
+            span.ready
+            span.label Research Needed
+            span.needMoreInformation
+            span.label Reserved
+            span.reserved
+            span.label Completed
+            span.completed
+          div.thick
+          div.sessionid.hide= everyauth.familysearch.user.sessionId
+          div
+            h1.label Persons
+            span.label Requests Queued
+            span.personsQueued
+            span.label In Flight
+            span.personsInFlight
+            span.label Processed
+            span.personsProcessed
+            span.label Persons Read
+            span.personsRead
+          div
+            h1.label Relationships
+            span.label Requests Queued
+            span.relationshipsQueued
+            span.label In Flight
+            span.relationshipsInFlight
+            span.label Relationships Read:
+            span.relationshipsRead
+          div.thick
+            h1.label Temple Ordinances
+            span.label Requests Queued
+            span.templesQueued
+            span.label In Flight
+            span.templesInFlight
+            span.label Ancestors Queried
+            span.templesRead
+
+    #main
+      != body
+    section.footer
+        div.legal Contact Us 
